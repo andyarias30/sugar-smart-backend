@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(cors())
 
 app.get("/mySugarLevels", getAllSugarLevels)
-app.post("/mysugarLevels", addSugarLevel)
+app.post("/mySugarLevels", addSugarLevel)
 
 app.listen(PORT, () => {
     console.log(` Listening on http://localhost:${PORT}...`)
