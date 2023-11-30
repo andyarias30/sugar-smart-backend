@@ -11,6 +11,7 @@ app.use(cors())
 app.get("/mySugarLevels", getAllSugarLevels)
 app.post("/mySugarLevels", addSugarLevel)
 
+
 app.listen(PORT, () => {
-    console.log(` Listening on http://localhost:${PORT}...`)
+    console.log(` Listening on http://localhost:${PORT}...❤️⚕️🩸`)
 })
