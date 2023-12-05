@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import { getAllSugarLevels, addSugarLevel } from './src/sugarLevels.js'
+import { getAllSugarLevels, addSugarLevel, updateSugarLevel } from './src/sugarLevels.js'
 
 const PORT = process.env.PORT || 3005
 
@@ -10,6 +10,7 @@ app.use(cors())
 
 app.get("/mySugarLevels", getAllSugarLevels)
 app.post("/mySugarLevels", addSugarLevel)
+app.patch("/mySugarLevels/:_id", updateSugarLevel)
 
 
 app.listen(PORT, () => {

@@ -1,3 +1,4 @@
+import { ObjectId } from 'mongodb'
 import { db } from './connectDb.js'
 
 export function getAllSugarLevels(req, res) {
@@ -33,5 +34,15 @@ export async function addSugarLevel(req, res) {
             })
     }
 }
+
+export async function updateSugarLevel(req,res){
+
+    const {_id} = req.params
+
+    console.log("req.doy-->", req.body)
+
+       await db.collection('sugarLevels').findOneAndUpdate({ _id: new ObjectId(_id) }, { $set: req.body }) 
+       getAllSugarLevels(req, res)
+    }
 
 
